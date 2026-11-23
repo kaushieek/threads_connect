@@ -1,0 +1,12 @@
+{
+  "name": "@threads-connect/types",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit false",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@threads-connect/database",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prisma:generate": "prisma generate --config prisma.config.ts",
+    "prisma:migrate": "prisma migrate dev --config prisma.config.ts",
+    "prisma:studio": "prisma studio --config prisma.config.ts",
+    "typecheck": "prisma validate --config prisma.config.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "prisma": "7.10.1",
+    "tsx": "^4.20.6"
+  }
+}

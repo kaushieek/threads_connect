@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --tc-bg: #f7f8f6;
+  --tc-surface: #ffffff;
+  --tc-text: #17201b;
+  --tc-muted: #65716a;
+  --tc-line: #e2e7e2;
+  --tc-primary: #176b53;
+  --tc-primary-hover: #10563f;
+  --tc-accent: #d9f0e6;
+  --tc-shadow: 0 18px 55px rgb(31 50 40 / 9%);
+  --tc-radius: 16px;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--tc-bg);
+  color: var(--tc-text);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --tc-bg: #101713;
+  --tc-surface: #17211b;
+  --tc-text: #edf4ef;
+  --tc-muted: #a4b1a8;
+  --tc-line: #2b3a31;
+  --tc-primary: #72c4a2;
+  --tc-primary-hover: #8ad6b4;
+  --tc-accent: #203d30;
+  --tc-shadow: 0 18px 55px rgb(0 0 0 / 25%);
+}
+
+* {
+  box-sizing: border-box;
+}
+.tc-button {
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font:
+    600 0.95rem 'DM Sans',
+    sans-serif;
+  padding: 0.85rem 1.25rem;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+.tc-button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--tc-primary) 55%, transparent);
+  outline-offset: 3px;
+}
+.tc-button:active {
+  transform: translateY(1px);
+}
+.tc-button--primary {
+  background: var(--tc-primary);
+  color: #fff;
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--tc-primary) 22%, transparent);
+}
+.tc-button--primary:hover {
+  background: var(--tc-primary-hover);
+}
+.tc-button--quiet {
+  background: transparent;
+  color: var(--tc-text);
+}
+.tc-wordmark {
+  align-items: center;
+  display: inline-flex;
+  font:
+    700 1.06rem 'Manrope',
+    sans-serif;
+  letter-spacing: -0.045em;
+}
+.tc-wordmark__accent {
+  color: var(--tc-muted);
+  font-weight: 500;
+}
+.tc-mark {
+  align-items: center;
+  background: var(--tc-primary);
+  border-radius: 9px;
+  color: #fff;
+  display: inline-flex;
+  font:
+    800 0.9rem 'Manrope',
+    sans-serif;
+  height: 28px;
+  justify-content: center;
+  margin-right: 0.55rem;
+  width: 28px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

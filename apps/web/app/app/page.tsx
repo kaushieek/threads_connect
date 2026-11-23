@@ -1,6 +1,12 @@
 import Link from 'next/link';
-import { Button, Wordmark } from '@threads-connect/ui';
+import { ArrowRight, Wordmark } from '@threads-connect/ui';
+import { Compass, GraduationCap, UsersRound } from 'lucide-react';
 import { ThemeToggle } from '../theme-toggle';
+
+const navigation = [
+  { label: 'Overview', href: '/app', icon: Compass, active: true },
+  { label: 'Your community', href: '#community', icon: UsersRound, active: false },
+];
 
 export default function AppHome() {
   return (
@@ -10,20 +16,18 @@ export default function AppHome() {
           <Wordmark />
         </Link>
         <nav aria-label="Workspace navigation">
-          <p className="app-nav-label">Workspace</p>
-          <Link className="app-nav-item app-nav-item--active" href="/app">
-            ⌂ &nbsp; Overview
-          </Link>
-          <Link className="app-nav-item" href="/app">
-            ◌ &nbsp; Conversations
-          </Link>
-          <Link className="app-nav-item" href="/app">
-            ♧ &nbsp; People
-          </Link>
-          <p className="app-nav-label">Your space</p>
-          <Link className="app-nav-item" href="/app">
-            ＋ &nbsp; Connect a team
-          </Link>
+          <p className="app-nav-label">Your community</p>
+          {navigation.map(({ label, href, icon: Icon, active }) => (
+            <Link
+              className={`app-nav-item${active ? ' app-nav-item--active' : ''}`}
+              href={href}
+              key={label}
+              aria-current={active ? 'page' : undefined}
+            >
+              <Icon aria-hidden="true" size={17} strokeWidth={1.7} />
+              {label}
+            </Link>
+          ))}
         </nav>
       </aside>
       <main className="app-main">
@@ -31,23 +35,26 @@ export default function AppHome() {
           <ThemeToggle />
         </div>
         <section className="app-content">
-          <span className="eyebrow">Your workspace</span>
-          <h1>Make room for good work.</h1>
-          <p>Your conversations and the people around them will find their home here.</p>
-          <div className="empty-state">
-            <span className="empty-icon" aria-hidden="true">
-              ✳
+          <span className="tc-eyebrow">Your community</span>
+          <h1 className="tc-display">Every chapter belongs.</h1>
+          <p>
+            Your institution&apos;s community will find its home here. Stay close to the people,
+            ideas and opportunities that bring it to life.
+          </p>
+          <div className="empty-state" id="community">
+            <span className="tc-avatar tc-avatar--sage tc-avatar--large" aria-hidden="true">
+              <GraduationCap size={22} strokeWidth={1.6} />
             </span>
-            <h2>Your space is ready when you are</h2>
+            <h2>Your next connection starts here</h2>
             <p>
-              Connect a team to bring your conversations together and make the important context
-              easier to find.
+              We&apos;re preparing a thoughtful space for your alumni, students, faculty and
+              institutional community.
             </p>
-            <Button>
-              Connect your first team <span aria-hidden="true">→</span>
-            </Button>
+            <Link className="tc-button tc-button--primary" href="/#institutional-partnership">
+              Learn about threads_connect <ArrowRight aria-hidden="true" size={16} />
+            </Link>
           </div>
-          <footer className="footer">A calmer way to work, together.</footer>
+          <footer className="footer">Beyond Graduation. Beyond Connections.</footer>
         </section>
       </main>
     </div>

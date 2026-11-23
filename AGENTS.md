@@ -2,7 +2,7 @@
 
 ## Product vision
 
-Build threads_connect as a calm, dependable workspace for connecting conversations and the people, teams, and services around them. Favor clarity, trust, and useful collaboration over feature density.
+Build threads_connect as a premium institutional alumni and student engagement ecosystem: “Beyond Graduation. Beyond Connections.” Connect alumni, students, faculty, and administrators through lasting relationships, belonging, mentorship, and opportunity. Favor clarity, trust, and useful community over feature density.
 
 ## Architecture principles
 

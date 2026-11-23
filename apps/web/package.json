@@ -11,17 +11,20 @@
   },
   "dependencies": {
     "@threads-connect/api-client": "workspace:*",
-    "@threads-connect/ui": "workspace:*",
     "@threads-connect/types": "workspace:*",
+    "@threads-connect/ui": "workspace:*",
+    "lucide-react": "^1.77.0",
     "motion": "^12.23.24",
     "next": "16.4.6",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^22.18.12",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "tailwindcss": "^4.3.5",
     "typescript": "^6.0.3"
   }
 }
